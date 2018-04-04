@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.0125" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
@@ -64,8 +64,8 @@
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
 <layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
-<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -1884,6 +1884,86 @@ INDUCTOR POWER 3.3UH 4.0A SMD&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="heatsink">
+<description>&lt;b&gt;Heatsinks&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="SK95-2M3">
+<description>&lt;b&gt;HEATSINK&lt;/b&gt;&lt;p&gt; manufacturer Fischer/distributor Buerklin</description>
+<wire x1="-6.35" y1="-1.397" x2="-6.35" y2="4.445" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="1.651" x2="-5.08" y2="4.445" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="1.651" x2="-2.54" y2="5.08" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="5.08" x2="-2.54" y2="5.08" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="5.08" x2="2.54" y2="1.651" width="0.1524" layer="21"/>
+<wire x1="5.08" y1="1.651" x2="5.08" y2="4.445" width="0.1524" layer="21"/>
+<wire x1="6.35" y1="4.445" x2="6.35" y2="-1.397" width="0.1524" layer="21"/>
+<wire x1="6.35" y1="-1.397" x2="5.334" y2="-1.397" width="0.1524" layer="21"/>
+<wire x1="-6.35" y1="4.445" x2="-5.08" y2="4.445" width="0.1524" layer="21" curve="-180"/>
+<wire x1="5.08" y1="4.445" x2="6.35" y2="4.445" width="0.1524" layer="21" curve="-180"/>
+<wire x1="5.334" y1="0" x2="5.334" y2="-1.397" width="0.1524" layer="21"/>
+<wire x1="5.334" y1="0" x2="-5.334" y2="0" width="0.1524" layer="21"/>
+<wire x1="-5.334" y1="0" x2="-5.334" y2="-1.397" width="0.1524" layer="21"/>
+<wire x1="-5.334" y1="-1.397" x2="-6.35" y2="-1.397" width="0.1524" layer="21"/>
+<wire x1="-4.191" y1="4.699" x2="-3.429" y2="4.699" width="0.1524" layer="21" curve="-180"/>
+<wire x1="-5.08" y1="1.651" x2="-4.318" y2="1.651" width="0.1524" layer="21" curve="180"/>
+<wire x1="-3.302" y1="1.651" x2="-2.54" y2="1.651" width="0.1524" layer="21" curve="180"/>
+<wire x1="-3.302" y1="1.651" x2="-3.429" y2="4.699" width="0.1524" layer="21"/>
+<wire x1="-4.191" y1="4.699" x2="-4.318" y2="1.651" width="0.1524" layer="21"/>
+<wire x1="3.429" y1="4.699" x2="4.191" y2="4.699" width="0.1524" layer="21" curve="-180"/>
+<wire x1="2.54" y1="1.651" x2="3.302" y2="1.651" width="0.1524" layer="21" curve="180"/>
+<wire x1="4.318" y1="1.651" x2="5.08" y2="1.651" width="0.1524" layer="21" curve="180"/>
+<wire x1="4.191" y1="4.699" x2="4.318" y2="1.651" width="0.1524" layer="21"/>
+<wire x1="3.429" y1="4.699" x2="3.302" y2="1.651" width="0.1524" layer="21"/>
+<circle x="0" y="2.54" radius="2.667" width="1.778" layer="42"/>
+<text x="-6.35" y="5.715" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="5.715" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="-6.477" y1="-1.524" x2="-5.207" y2="5.207" layer="41"/>
+<rectangle x1="-5.461" y1="-0.127" x2="5.461" y2="5.207" layer="41"/>
+<rectangle x1="5.207" y1="-1.524" x2="6.477" y2="5.207" layer="41"/>
+<rectangle x1="-6.477" y1="-1.524" x2="-5.207" y2="5.207" layer="43"/>
+<rectangle x1="-5.461" y1="-0.127" x2="5.461" y2="5.207" layer="43"/>
+<rectangle x1="5.207" y1="-1.524" x2="6.477" y2="5.207" layer="43"/>
+<hole x="0" y="2.54" drill="3.302"/>
+</package>
+</packages>
+<symbols>
+<symbol name="KK">
+<wire x1="-5.08" y1="0" x2="5.08" y2="0" width="0.254" layer="94"/>
+<wire x1="5.08" y1="0" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="4.445" y2="5.08" width="0.254" layer="94"/>
+<wire x1="4.445" y1="5.08" x2="4.445" y2="1.27" width="0.254" layer="94"/>
+<wire x1="4.445" y1="1.27" x2="3.175" y2="1.27" width="0.254" layer="94"/>
+<wire x1="3.175" y1="1.27" x2="3.175" y2="5.08" width="0.254" layer="94"/>
+<wire x1="3.175" y1="5.08" x2="2.54" y2="5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="5.08" x2="2.54" y2="1.27" width="0.254" layer="94"/>
+<wire x1="2.54" y1="1.27" x2="-2.54" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.27" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="-3.175" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="5.08" x2="-3.175" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.27" x2="-4.445" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-4.445" y1="1.27" x2="-4.445" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-4.445" y1="5.08" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="5.08" x2="-5.08" y2="0" width="0.254" layer="94"/>
+<text x="5.715" y="3.175" size="1.778" layer="95">&gt;NAME</text>
+<text x="5.715" y="0.635" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SK95-2M3" prefix="KK">
+<description>&lt;b&gt;HEATSINK&lt;/b&gt;&lt;p&gt; manufacturer Fischer/distributor Buerklin</description>
+<gates>
+<gate name="G$1" symbol="KK" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SK95-2M3">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1920,6 +2000,8 @@ INDUCTOR POWER 3.3UH 4.0A SMD&lt;br&gt;
 <part name="U$4" library="H_bridge_library" deviceset="BANANA" device=""/>
 <part name="U$5" library="H_bridge_library" deviceset="BANANA" device=""/>
 <part name="P5" library="adi_v1.6" deviceset="BANANA" device=""/>
+<part name="KK3" library="heatsink" deviceset="SK95-2M3" device=""/>
+<part name="KK4" library="heatsink" deviceset="SK95-2M3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1963,6 +2045,8 @@ INDUCTOR POWER 3.3UH 4.0A SMD&lt;br&gt;
 <instance part="U$4" gate="G$1" x="88.265" y="-7.9375" rot="R270"/>
 <instance part="U$5" gate="G$1" x="72.39" y="-14.2875"/>
 <instance part="P5" gate="G$1" x="64.77" y="-13.6525" rot="R180"/>
+<instance part="KK3" gate="G$1" x="96.52" y="15.24" rot="R270"/>
+<instance part="KK4" gate="G$1" x="106.68" y="15.24" rot="R270"/>
 </instances>
 <busses>
 </busses>
